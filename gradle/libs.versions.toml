@@ -10,6 +10,19 @@ material = "1.10.0"
 activity = "1.10.1"
 constraintlayout = "2.1.4"
 
+firebaseBom = "32.7.0" # Versión sugerida para Firebase BOM
+navigation = "2.9.0" # Versión sugerida para Navigation Component
+glide = "4.16.0" # Versión sugerida para Glide
+hilt = "2.51.1" # Versión sugerida para Dagger Hilt
+loadingButton = "2.2.0"
+circleImageView = "3.1.0"
+viewPagerIndicator = "1.0.0-alpha.1"
+#viewPagerIndicator = "1.1.0"
+stepView = "1.5.1"
+# Para Hilt, es importante la compatibilidad con el plugin KSP
+ksp = "2.0.21-1.0.27" # Asegúrate de que la versión de KSP coincida con tu versión de Kotlin
+
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -20,7 +33,38 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 
+# Navigation component
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+
+# Loading button
+simplepass-loading-button-android = { group = "br.com.simplepass", name = "loading-button-android", version.ref = "loadingButton" }
+
+# Glide
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" } # Añade el annotation processor
+
+# Circular image
+circleimageview = { group = "de.hdodenhof", name = "circleimageview", version.ref = "circleImageView" }
+
+# ViewPager2 indicator
+viewpagerindicator = { group = "io.github.vejei.viewpagerindicator", name = "viewpagerindicator", version.ref = "viewPagerIndicator" }
+#viewpagerindicator = { group = "androidx.viewpager2", name = "viewpager2", version.ref = "viewPagerIndicator" }
+
+# StepView
+stepview = { group = "com.shuhart.stepview", name = "stepview", version.ref = "stepView" }
+
+# Dagger Hilt
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" } # ID correcto para kotlin-parcelize
+androidx-navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" } # Usa la misma versión que Navigation
+dagger-hilt-android-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+google-services = { id = "com.google.gms.google-services", version = "4.4.1" } # Versión actual de Google Services plugin
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" } # Añade el plugin KSP

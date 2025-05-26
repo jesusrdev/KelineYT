@@ -1,6 +1,13 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
+    alias(libs.plugins.androidx.navigation.safeargs.kotlin)
+
+    alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.dagger.hilt.android.plugin)
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -45,4 +52,23 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
+    implementation(libs.simplepass.loading.button.android)
+
+    implementation(libs.glide)
+    annotationProcessor(libs.glide.compiler) // Para el procesador de anotaciones de Glide
+
+    implementation(libs.circleimageview)
+    implementation(libs.viewpagerindicator)
+    implementation(libs.stepview)
+
+    // Navigation component (usando 'libs.' para fragment y ui)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+
+    // Dagger Hilt (usando 'libs.' para android y compiler)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler) // Usar ksp en lugar de kapt
+
 }
