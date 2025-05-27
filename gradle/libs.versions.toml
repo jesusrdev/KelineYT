@@ -20,7 +20,13 @@ viewPagerIndicator = "1.0.0-alpha.1"
 #viewPagerIndicator = "1.1.0"
 stepView = "1.5.1"
 # Para Hilt, es importante la compatibilidad con el plugin KSP
-ksp = "2.0.21-1.0.27" # Asegúrate de que la versión de KSP coincida con tu versión de Kotlin
+ksp = "2.0.21-1.0.27"
+
+# Firebase
+firebaseAuth = "23.2.1"
+credentials = "1.5.0"
+credentialsPlayServicesAuth = "1.5.0"
+googleid = "1.1.1" # Asegúrate de que la versión de KSP coincida con tu versión de Kotlin
 
 
 [libraries]
@@ -58,6 +64,12 @@ stepview = { group = "com.shuhart.stepview", name = "stepview", version.ref = "s
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
 
+# Firebase
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+androidx-credentials = { group = "androidx.credentials", name = "credentials", version.ref = "credentials" }
+androidx-credentials-play-services-auth = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "credentialsPlayServicesAuth" }
+googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -66,5 +78,5 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" } # ID correcto para kotlin-parcelize
 androidx-navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" } # Usa la misma versión que Navigation
 dagger-hilt-android-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
-google-services = { id = "com.google.gms.google-services", version = "4.4.1" } # Versión actual de Google Services plugin
+google-services = { id = "com.google.gms.google-services", version = "4.4.2" } # Versión actual de Google Services plugin
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" } # Añade el plugin KSP
