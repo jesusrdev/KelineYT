@@ -40,6 +40,10 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -54,7 +58,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
 
-    implementation(libs.simplepass.loading.button.android)
+//    implementation(libs.simplepass.loading.button.android)
+    implementation(libs.loading.button)
 
     implementation(libs.glide)
     annotationProcessor(libs.glide.compiler) // Para el procesador de anotaciones de Glide

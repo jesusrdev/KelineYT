@@ -16,7 +16,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        jcenter()
+        maven("https://verve.jfrog.io/artifactory/verve-gradle-release/")
     }
 }
 

@@ -14,7 +14,8 @@ firebaseBom = "32.7.0" # Versión sugerida para Firebase BOM
 navigation = "2.9.0" # Versión sugerida para Navigation Component
 glide = "4.16.0" # Versión sugerida para Glide
 hilt = "2.51.1" # Versión sugerida para Dagger Hilt
-loadingButton = "2.2.0"
+#loadingButton = "2.2.0"
+loadingButtonVersion = "3.0.0"
 circleImageView = "3.1.0"
 viewPagerIndicator = "1.0.0-alpha.1"
 #viewPagerIndicator = "1.1.0"
@@ -44,7 +45,8 @@ androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navi
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
 
 # Loading button
-simplepass-loading-button-android = { group = "br.com.simplepass", name = "loading-button-android", version.ref = "loadingButton" }
+#simplepass-loading-button-android = { group = "br.com.simplepass", name = "loading-button-android", version.ref = "loadingButton" }
+loading-button = { module = "io.writeopia:loading-button", version.ref = "loadingButtonVersion" }
 
 # Glide
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
