@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
+import dev.imyisus.kelineyt.R
 import dev.imyisus.kelineyt.data.User
 import dev.imyisus.kelineyt.databinding.FragmentRegisterBinding
 import dev.imyisus.kelineyt.util.RegisterValidation
@@ -35,6 +37,10 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.tvDoHaveAccount.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+        }
 
         binding.apply {
             buttonRegisterRegister.setOnClickListener {

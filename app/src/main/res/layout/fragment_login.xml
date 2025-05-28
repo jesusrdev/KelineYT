@@ -91,7 +91,7 @@
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
             app:layout_constraintTop_toBottomOf="@id/etPasswordLogin" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <io.writeopia.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonLoginLogin"
             style="@style/blueButtonStyle"
             android:layout_width="0dp"
@@ -100,7 +100,8 @@
             android:text="Login"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
-            app:layout_constraintTop_toBottomOf="@id/tvForgotPasswordLogin" />
+            app:layout_constraintTop_toBottomOf="@id/tvForgotPasswordLogin"
+            app:spinning_bar_color="@color/white" />
 
 
         <ImageView
